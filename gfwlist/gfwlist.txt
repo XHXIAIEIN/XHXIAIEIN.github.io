@@ -1,7 +1,8 @@
-!general
+!
 ||google.com
-||twitter.net
+||twitter.com
 ||facebook.net
+||reddit.com
 
 !youtube
 ||youtube.com
@@ -15,6 +16,9 @@
 
 !design
 ||behance.net
+||pinterest.com
+||deviantart.com
+||artstation.com
 
 !wiki
 ||wikipedia.org
@@ -26,4 +30,3 @@
 ||ytimg.com
 ||gstatic.com
 ||ggpht.com
-

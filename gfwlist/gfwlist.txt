@@ -17,6 +17,7 @@
 !facebook
 ||facebook.net
 ||facebook.com
+||fbcdn.net
 
 !instagram
 ||instagram.com

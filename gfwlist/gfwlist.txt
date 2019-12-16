@@ -38,6 +38,21 @@
 !behance
 ||behance.net
 
+!flickr
+||flickr.com
+
+!unsplash
+||unsplash.com
+||insightexpressai.com
+||atdmt.com
+||scorecardresearch.com
+
+!unsplash
+||unsplash.com
+
+!pixabay
+||pixabay.com
+
 !dribbble
 ||dribbble.net
 
@@ -65,7 +80,7 @@
 ||siftscience.com
 ||t.co
 
-!patreon
+!trello
 ||trello.com
 ||launchdarkly.com
 ||trellocdn.com

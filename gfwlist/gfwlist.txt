@@ -50,6 +50,9 @@
 !unsplash
 ||unsplash.com
 
+!giphy
+||giphy.com
+
 !pixabay
 ||pixabay.com
 

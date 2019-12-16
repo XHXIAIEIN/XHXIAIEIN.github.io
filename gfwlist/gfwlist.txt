@@ -91,17 +91,9 @@
 
 !demilked
 ||demilked.com
-||fbcdn.net
-||gstatic.com
-||adsrvr.org
-||revcontent.com
-||itid.lt
-||emxdgt.com
-||openx.net
-||s3.amazonaws.com
-||pubmatic.com
-||adnxs.com
-||crwdcntrl.net
+
+!amazonaws
+||amazonaws.com
 
 !wiki
 ||wikipedia.org

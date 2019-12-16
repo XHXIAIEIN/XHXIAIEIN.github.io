@@ -1,6 +1,12 @@
-!
+!google
 ||google.com
+||googleusercontent.com
+||googlevideo.com
+||google-analytics.com
+
+!twitter
 ||twitter.com
+||twimg.com
 
 !facebook
 ||facebook.net
@@ -9,8 +15,7 @@
 !youtube
 ||youtube.com
 ||youtube-nocookie.com
-||googleusercontent.com
-||googlevideo.com
+
 
 !instagram
 ||instagram.com
@@ -19,7 +24,6 @@
 !artstation
 ||artstation.com
 ||gstatic.com
-||artstation.com
 ||hotjar.com
 
 !pinterest
@@ -36,7 +40,6 @@
 ||deviantart.net
 ||parastorage.com
 ||sentry-cdn.com
-||google-analytics.com
 ||scorecardresearch.com
 ||wix.com
 ||wixmp.com

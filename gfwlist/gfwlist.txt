@@ -1,7 +1,10 @@
 !
 ||google.com
 ||twitter.com
+
+!facebook
 ||facebook.net
+||facebook.com
 
 !youtube
 ||youtube.com
@@ -13,14 +16,20 @@
 ||instagram.com
 ||cdninstagram.com
 
-!design
-||behance.net
+!artstation
 ||artstation.com
+||gstatic.com
+||artstation.com
+||hotjar.com
 
 !pinterest
 ||pinterest.com
 ||pinterest.ru
 ||pinterest.jp
+||pinimg.com
+
+!design
+||behance.net
 
 !deviantart
 ||deviantart.com

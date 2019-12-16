@@ -16,7 +16,6 @@
 ||youtube.com
 ||youtube-nocookie.com
 
-
 !instagram
 ||instagram.com
 ||cdninstagram.com
@@ -25,6 +24,8 @@
 ||artstation.com
 ||gstatic.com
 ||hotjar.com
+||ggpht.com
+||ytimg.com
 
 !pinterest
 ||pinterest.com
@@ -32,24 +33,23 @@
 ||pinterest.jp
 ||pinimg.com
 
-!design
+!behance
 ||behance.net
 
 !deviantart
 ||deviantart.com
 ||deviantart.net
-||parastorage.com
-||sentry-cdn.com
-||scorecardresearch.com
 ||wix.com
 ||wixmp.com
+||sentry-cdn.com
+||parastorage.com
+||scorecardresearch.com
 
 !reddit
 ||reddit.com
-||redditmedia.com
-||redd.it
 ||redditstatic.com
 ||redditmedia.com
+||redd.it
 ||doubleclick.net
 ||aaxads.com
 ||aaxdetect.com

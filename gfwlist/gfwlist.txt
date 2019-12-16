@@ -65,6 +65,11 @@
 ||siftscience.com
 ||t.co
 
+!patreon
+||trello.com
+||launchdarkly.com
+||trellocdn.com
+
 !wiki
 ||wikipedia.org
 

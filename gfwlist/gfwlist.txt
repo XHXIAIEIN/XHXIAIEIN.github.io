@@ -1,17 +1,7 @@
-!日常
+!general
 ||google.com
 ||twitter.net
 ||facebook.net
-||steamcommunity.net
-||wikipedia.org
-
-
-!设计相关
-||behance.net
-
-!instagram
-||instagram.com
-||cdninstagram.com
 
 !youtube
 ||youtube.com
@@ -19,9 +9,21 @@
 ||googleusercontent.com
 ||googlevideo.com
 
-!资源加载
+!instagram
+||instagram.com
+||cdninstagram.com
+
+!design
+||behance.net
+
+!wiki
+||wikipedia.org
+
+!game
+||steamcommunity.net
+
+!resources
 ||ytimg.com
 ||gstatic.com
 ||ggpht.com
-
 

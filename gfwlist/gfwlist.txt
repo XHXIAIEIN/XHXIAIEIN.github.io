@@ -1,6 +1,5 @@
 !日常
 ||google.com
-||youtube.com
 ||twitter.net
 ||facebook.net
 ||steamcommunity.net
@@ -14,10 +13,15 @@
 ||instagram.com
 ||cdninstagram.com
 
+!youtube
+||youtube.com
+||youtube-nocookie.com
+||googleusercontent.com
+||googlevideo.com
+
 !资源加载
 ||ytimg.com
 ||gstatic.com
-||youtube-nocookie.com
 ||ggpht.com
-||googlevideo.com
+
 

@@ -2,7 +2,6 @@
 ||google.com
 ||twitter.com
 ||facebook.net
-||reddit.com
 
 !youtube
 ||youtube.com
@@ -20,9 +19,15 @@
 ||deviantart.com
 ||artstation.com
 
-!github
-||github.com
-||githubusercontent.com
+!reddit
+||reddit.com
+||redditmedia.com
+||redd.it
+||redditstatic.com
+||redditmedia.com
+||doubleclick.net
+||aaxads.com
+||aaxdetect.com
 
 !wiki
 ||wikipedia.org
@@ -30,7 +35,6 @@
 !game
 ||steamcommunity.net
 
-!resources
-||ytimg.com
-||gstatic.com
-||ggpht.com
+!github
+||github.com
+||githubusercontent.com

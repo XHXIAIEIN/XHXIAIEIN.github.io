@@ -20,6 +20,9 @@
 ||deviantart.com
 ||artstation.com
 
+!github
+||raw.githubusercontent.com
+
 !wiki
 ||wikipedia.org
 

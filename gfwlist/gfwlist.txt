@@ -21,6 +21,7 @@
 ||artstation.com
 
 !github
+||github.com
 ||githubusercontent.com
 
 !wiki

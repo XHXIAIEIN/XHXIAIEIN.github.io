@@ -89,6 +89,20 @@
 ||launchdarkly.com
 ||trellocdn.com
 
+!demilked
+||demilked.com
+||fbcdn.net
+||gstatic.com
+||adsrvr.org
+||revcontent.com
+||itid.lt
+||emxdgt.com
+||openx.net
+||s3.amazonaws.com
+||pubmatic.com
+||adnxs.com
+||crwdcntrl.net
+
 !wiki
 ||wikipedia.org
 
@@ -101,3 +115,4 @@
 !github
 ||github.com
 ||githubusercontent.com
+||raw.githubusercontent.com

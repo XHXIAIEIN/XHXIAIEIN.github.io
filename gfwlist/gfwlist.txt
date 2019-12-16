@@ -15,9 +15,22 @@
 
 !design
 ||behance.net
-||pinterest.com
-||deviantart.com
 ||artstation.com
+
+!pinterest
+||pinterest.com
+||pinterest.ru
+||pinterest.jp
+
+!deviantart
+||deviantart.com
+||deviantart.net
+||parastorage.com
+||sentry-cdn.com
+||google-analytics.com
+||scorecardresearch.com
+||wix.com
+||wixmp.com
 
 !reddit
 ||reddit.com

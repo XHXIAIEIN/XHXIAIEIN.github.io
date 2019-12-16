@@ -9,9 +9,10 @@
 
 !设计相关
 ||behance.net
-||instagram.com
 
-!
+!instagram
+||instagram.com
+||cdninstagram.com
 
 !资源加载
 ||ytimg.com

@@ -109,3 +109,5 @@
 ||github.com
 ||githubusercontent.com
 ||raw.githubusercontent.com
+
+||cloudflare.com

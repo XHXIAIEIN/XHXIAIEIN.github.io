@@ -60,6 +60,10 @@
 !game
 ||steamcommunity.net
 
+!discord
+||discordapp.com
+
+
 !github
 ||github.com
 ||githubusercontent.com

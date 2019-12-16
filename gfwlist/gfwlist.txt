@@ -41,6 +41,7 @@
 
 !flickr
 ||flickr.com
+||staticflickr.com
 
 !unsplash
 ||unsplash.com

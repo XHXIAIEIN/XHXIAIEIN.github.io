@@ -59,6 +59,12 @@
 ||aaxads.com
 ||aaxdetect.com
 
+!patreon
+||patreon.com
+||typekit.net
+||siftscience.com
+||t.co
+
 !wiki
 ||wikipedia.org
 

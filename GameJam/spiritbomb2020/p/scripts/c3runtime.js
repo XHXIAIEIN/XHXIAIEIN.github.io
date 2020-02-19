@@ -1233,7 +1233,7 @@ self.C3_JsPropNameTable = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
-		() => 220,
+		() => 300,
 		() => "timer",
 		() => 4,
 		() => "DEBUG",
@@ -1454,14 +1454,7 @@ self.C3_JsPropNameTable = [
 			return () => (-f0(f1(1, 2)));
 		},
 		() => "clear",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(0.01, 0.1);
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(0.2, 1);
-		},
+		() => -20,
 		() => "itemObject - Pick Up",
 		() => "item_shake",
 		() => 3500,
@@ -1471,6 +1464,7 @@ self.C3_JsPropNameTable = [
 		() => "Pick1",
 		() => "LeftHand",
 		() => 500,
+		() => 220,
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
@@ -1549,6 +1543,14 @@ self.C3_JsPropNameTable = [
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpBehavior("clear");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(0.01, 0.1);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(0.2, 1);
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();

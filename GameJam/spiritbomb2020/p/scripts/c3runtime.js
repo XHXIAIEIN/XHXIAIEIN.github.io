@@ -820,8 +820,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Exps.rgbex255,
 		C3.Plugins.System.Exps.choose,
 		C3.Plugins.System.Cnds.Else,
-		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.System.Cnds.TriggerOnce,
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Behaviors.Tween.Acts.TweenValue,
 		C3.Plugins.System.Acts.SetLayerEffectEnabled,
 		C3.Plugins.Sprite.Acts.Destroy,
@@ -948,6 +948,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Fade.Cnds.OnWaitEnd,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.Audio.Cnds.OnEnded,
+		C3.Plugins.Keyboard.Cnds.OnAnyKey,
 		C3.Plugins.Touch.Cnds.OnTouchStart
 	];
 };
@@ -1214,6 +1215,10 @@ self.C3_JsPropNameTable = [
 			return () => f0(255, 255, 255);
 		},
 		() => 2,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpInstVar();
+		},
 		() => 3,
 		() => "很好，你被录用了。",
 		() => 0.1,
@@ -1248,10 +1253,6 @@ self.C3_JsPropNameTable = [
 		() => "MoveRight",
 		() => "Player - Animation - Bag",
 		() => "RightHand",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpInstVar();
-		},
 		() => "Camera",
 		() => "camera - init",
 		p => {
@@ -1431,7 +1432,6 @@ self.C3_JsPropNameTable = [
 		() => -105,
 		() => 50,
 		() => "招废品清理员，待遇从优。",
-		() => 1.5,
 		() => 0.01,
 		() => 166,
 		() => 170,
@@ -1542,6 +1542,7 @@ self.C3_JsPropNameTable = [
 		() => 1.25,
 		() => 296,
 		() => 316,
+		() => 1.5,
 		() => "right",
 		() => "full",
 		() => "end",

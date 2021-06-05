@@ -22,7 +22,7 @@ https://xhxiaiein.github.io/Construct3
   
   
 # GRID SPACE
-2017/CIGA/_Music_:Jazmaybe/Art:HiNOZ/_Producer_:MAXX/_Programmer_:Freezer.CH&Totoyan&XHXIAIEIN  
+2017/CIGA/_Music_:Jazmaybe/Art:HiNOZ/_Producer_:MAXX/_UI_:Totoyan/_Programmer_:Freezer.CH&XHXIAIEIN  
 在线演示(GameJam)：https://xhxiaiein.github.io/Demo/GameJam/2017/CIGA/
 
 

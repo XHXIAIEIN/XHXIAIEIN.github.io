@@ -21,7 +21,7 @@ Demo(GameJam)：https://xhxiaiein.github.io/Demo/GameJam/2020/CIGA/
 Demo(GameJam)：https://xhxiaiein.github.io/Demo/GameJam/2020/Spirit/
   
   
-# GRID SPACE
+# Grid Space
 2017/CIGA/_Music_:Jazmaybe/Art:HiNOZ/_Producer_:MAXX/_Programmer_:Freezer.CH\/_UI_:Totoyan/_Touchfish_:XHXIAIEIN  
 Demo(GameJam)：https://xhxiaiein.github.io/Demo/GameJam/2017/CIGA/
 

@@ -30,8 +30,14 @@ Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2020/Spirit/
 ![2020_S1](https://user-images.githubusercontent.com/45864744/120891253-2bca1980-c63a-11eb-9aea-0ce70ecbda80.png)   
 ![2020_S2](https://user-images.githubusercontent.com/45864744/120891283-4ac8ab80-c63a-11eb-99ff-29bf1b419132.png)   
 ![2020_S3](https://user-images.githubusercontent.com/45864744/120891285-4ef4c900-c63a-11eb-9e23-3e8da0832609.png)  
+  
+  
+# Pilgrimage  
+2019/GGJ/_Art_:goatfist/_Programmer_: XHXIAIEIN/_Designer_:月神、阿卡  
+Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2019//  
 
-
+![2019_1](https://user-images.githubusercontent.com/45864744/124362337-d1d36880-dc66-11eb-82c7-a161c9c0fd35.png)
+  
   
 # Grid Space
 2017/CIGA/_Music_:Jazmaybe/Art:HiNOZ/_Producer_:MAXX/_Programmer_:Freezer.CH\/_UI_:Totoyan/_Touchfish_:XHXIAIEIN  

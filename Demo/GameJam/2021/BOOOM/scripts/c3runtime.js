@@ -6493,9 +6493,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TiledBg.Acts.SetVisible,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
-		C3.Plugins.TiledBg.Acts.Destroy,
+		C3.Behaviors.Fade.Cnds.OnWaitEnd,
 		C3.Behaviors.Platform.Acts.SetMaxSpeed,
 		C3.Plugins.TiledBg.Exps.UID,
+		C3.Plugins.Audio.Cnds.IsTagPlaying,
 		C3.Plugins.AJAX.Acts.RequestFile,
 		C3.Plugins.System.Acts.WaitForPreviousActions,
 		C3.Plugins.Dictionary.Acts.JSONLoad,
@@ -6608,7 +6609,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Audio.Acts.Stop,
 		C3.Plugins.System.Exps.tokenat,
 		C3.Plugins.Audio.Acts.PlayByName,
-		C3.Plugins.Audio.Cnds.IsTagPlaying,
 		C3.Plugins.System.Exps.tokencount,
 		C3.Plugins.Browser.Exps.ExecJS,
 		C3.Plugins.System.Exps.replace,
@@ -6617,8 +6617,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TiledBg.Cnds.IsVisible,
 		C3.Plugins.TiledBg.Cnds.IsOnScreen,
 		C3.Plugins.TiledBg.Acts.SetImageOffsetX,
-		C3.Plugins.TiledBg.Exps.ImageOffsetX,
-		C3.Plugins.System.Acts.RestartLayout
+		C3.Plugins.TiledBg.Exps.ImageOffsetX
 	];
 };
 self.C3_JsPropNameTable = [
@@ -6712,6 +6711,7 @@ self.C3_JsPropNameTable = [
 	{EventArrow: 0},
 	{Flash: 0},
 	{Transition: 0},
+	{cover: 0},
 	{Graphics: 0},
 	{EventTrigger: 0},
 	{Sky: 0},
@@ -6809,8 +6809,7 @@ self.C3_JsPropNameTable = [
 	{GameState: 0},
 	{ScreenTime: 0},
 	{GameProgress: 0},
-	{dur: 0},
-	{state: 0}
+	{dur: 0}
 ];
 }
 
@@ -7046,6 +7045,7 @@ self.C3_ExpressionFuncs = [
 			return () => ((n0.ExpInstVar()) === ("screen4_b4") ? 1 : 0);
 		},
 		() => "screen6_t1",
+		() => "screen5_end",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => ((n0.ExpInstVar()) === ("teleport_screen3") ? 1 : 0);
@@ -7079,6 +7079,7 @@ self.C3_ExpressionFuncs = [
 		() => "screen7_b2",
 		() => "screen8_opening",
 		() => "screen8_t1",
+		() => "ready_show_img2",
 		() => "show_img2",
 		() => "HUD",
 		() => "thank",
@@ -7116,7 +7117,6 @@ self.C3_ExpressionFuncs = [
 		() => "screen5_t1",
 		() => "screen5_t2_ready",
 		() => "screen5_t2",
-		() => "screen5_end",
 		() => "Loading",
 		() => "loadDialogues",
 		() => "banner",
@@ -7771,12 +7771,7 @@ self.C3_ExpressionFuncs = [
 			const f1 = p._GetNode(1).GetBoundMethod();
 			const v2 = p._GetNode(2).GetVar();
 			return () => f0(f1(), v2.GetValue());
-		},
-		() => "screen2_1",
-		() => "test",
-		() => "reset",
-		() => "Debug",
-		() => "Debug FPS"
+		}
 ];
 
 

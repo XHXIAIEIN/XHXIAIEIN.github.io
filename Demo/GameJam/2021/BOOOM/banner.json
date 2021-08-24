@@ -15,6 +15,6 @@
         "screen4_b4": "{\"c2array\":true,\"size\":[1,1,1],\"data\":[[[\"说起来[tw=wait 0.4]都不知道过了多少年了，[tw=wait 0.1]那时候[tw=wait 0.2]我们一起在大学里教书[tw=wait 0.04]…[tw=wait 0.04]…\"]]]}",
         "screen7_b1": "{\"c2array\":true,\"size\":[4,1,1],\"data\":[[[\"当晚我做了一个奇怪的梦\"]],[[\"好像梦到童年时候的事情，又梦到大学时代的事情，朦朦胧胧的，但又非常地真实\"]],[[\"有时候我真怕在梦里永远醒不来了\"]],[[\"又或许，其实我们本来……\"]]]}",
         "screen7_b2": "{\"c2array\":true,\"size\":[3,1,1],\"data\":[[[\"头好痛\"]],[[\"好像又梦见了那个女孩\"]],[[\"每次都看不清长相，朦朦胧胧的，真是令人迷惑\"]]]}",
-        "thank": "{\"c2array\":true,\"size\":[9,1,1],\"data\":[[[\"[sfdx=offsetx 1600]-END-[/sfdx]\"]],[[\"[sfdx=offsetx 900]艾迪：剧本/美术/配乐[/sfdx]\"]],[[\"[sfdx=offsetx 900]海鑫：关卡设计/程序[/sfdx]\"]],[[\"[sfdx=offsetx 900]故事灵感:村上春树《遇见百分之百的女孩》[/sfdx]\"]],[[\"[sfdx=offsetx 900]故事灵感:小林泰三《醉步男》[/sfdx]\"]],[[\"[sfdx=offsetx 900]故事灵感:梶尾真治《回忆爱玛侬》[/sfdx]\"]],[[\"[sfdx=offsetx 900]字体:霞鹜文楷[/sfdx]\"]],[[\"[sfdx=offsetx 900]致谢:机核网[/sfdx]\"]],[[\"[sfdx=offsetx 1600]感谢游玩[/sfdx]\"]]]}"
+        "thank": "{\"c2array\":true,\"size\":[10,1,1],\"data\":[[[\"[sfdx=offsetx 1600]-END-[/sfdx]\"]],[[\"[sfdx=offsetx 900]艾迪：剧本/美术/配乐[/sfdx]\"]],[[\"[sfdx=offsetx 900]海鑫：关卡设计/程序[/sfdx]\"]],[[\"[sfdx=offsetx 900]故事灵感：村上春树《遇见百分之百的女孩》[/sfdx]\"]],[[\"[sfdx=offsetx 900]故事灵感：小林泰三《醉步男》[/sfdx]\"]],[[\"[sfdx=offsetx 900]故事灵感：梶尾真治《回忆爱玛侬》[/sfdx]\"]],[[\"[sfdx=offsetx 900]字体：霞鹜文楷[/sfdx]\"]],,[[\"[sfdx=offsetx 900]制作工具：Construct3[/sfdx]\"]],[[\"[sfdx=offsetx 900]致谢：机核网[/sfdx]\"]],[[\"[sfdx=offsetx 1600]感谢游玩[/sfdx]\"]]]}"
     }
 }

@@ -38,12 +38,12 @@ html, body, canvas {
 
 
 @font-face {
-	font-family: 'agencyb';
-	src: url('fonts/agencyb.ttf') format('truetype');
+	font-family: 'agencyr';
+	src: url('fonts/agencyr.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'agencyr';
-	src: url('fonts/agencyr.ttf') format('truetype');
+	font-family: 'agencyb';
+	src: url('fonts/agencyb.ttf') format('truetype');
 }
 

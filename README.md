@@ -4,10 +4,19 @@ https://xhxiaiein.github.io/Construct3
   
   
 # thousand nights on the ferry  
-2021/GGJ/_Music_:Eddie/_Art_:Eddie/_Programmer_:XHXIAIEIN  
+2021/BOOOM/_Music_:Eddie/_Art_:Eddie/_Programmer_:XHXIAIEIN  
 Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/BOOOM/  
-![cover](https://user-images.githubusercontent.com/45864744/130553697-9b0c8506-4761-4a82-9a74-38edd51e8d80.jpg)
-  
+![2021_5](https://user-images.githubusercontent.com/45864744/130553697-9b0c8506-4761-4a82-9a74-38edd51e8d80.jpg)
+
+
+# Remember
+2021/GGJ/_Art_:王芒果/_Programmer_:XHXIAIEIN  
+Video：https://www.bilibili.com/video/BV1ay4y1K7wX?zw  
+Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/GGJ/  
+![2021_3](https://user-images.githubusercontent.com/45864744/142605347-00ed17a7-1408-4930-9564-37add0e44c3d.png)  
+![2021_4](https://user-images.githubusercontent.com/45864744/142605368-97c8b64b-3225-4411-a64a-64ef485313c6.png)  
+
+
   
 # Diving Secure
 2021/GGJ/_Music_:北极/_Art_:丁丁/_Programmer_:XHXIAIEIN  

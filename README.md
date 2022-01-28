@@ -15,7 +15,7 @@ Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GGJ/
 # Remember  
 2021/GGJ/_Art_:王芒果/_Programmer_:XHXIAIEIN  
 Video：https://www.bilibili.com/video/BV1ay4y1K7wX?zw  
-Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/CIGA/  
+Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/CiGA/  
 ![2021_4](https://user-images.githubusercontent.com/45864744/142605347-00ed17a7-1408-4930-9564-37add0e44c3d.png)  
 ![2021_5](https://user-images.githubusercontent.com/45864744/142605368-97c8b64b-3225-4411-a64a-64ef485313c6.png)  
 ![2021_6](https://user-images.githubusercontent.com/45864744/142606816-09a50da0-2062-4114-8b46-6d465baabc78.png)  

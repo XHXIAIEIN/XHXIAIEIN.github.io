@@ -15,7 +15,7 @@ Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GGJ/
 # Remember  
 2021/GGJ/_Art_:王芒果/_Programmer_:XHXIAIEIN  
 Video：https://www.bilibili.com/video/BV1ay4y1K7wX?zw  
-Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/GGJ/  
+Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/CIGA/  
 ![2021_4](https://user-images.githubusercontent.com/45864744/142605347-00ed17a7-1408-4930-9564-37add0e44c3d.png)  
 ![2021_5](https://user-images.githubusercontent.com/45864744/142605368-97c8b64b-3225-4411-a64a-64ef485313c6.png)  
 ![2021_6](https://user-images.githubusercontent.com/45864744/142606816-09a50da0-2062-4114-8b46-6d465baabc78.png)  
@@ -30,7 +30,7 @@ Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/BOOOM/
 # Diving Secure
 2021/GGJ/_Music_:北极/_Art_:丁丁/_Programmer_:XHXIAIEIN  
 Video：https://www.bilibili.com/video/BV13L4y1B7aw  
-Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/CIGA/  
+Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2021/GGJ/  
 ![2021_1](https://user-images.githubusercontent.com/45864744/120891320-86fc0c00-c63a-11eb-9052-6b5317a5d338.png)  
 ![2021_2](https://user-images.githubusercontent.com/45864744/120891321-882d3900-c63a-11eb-885e-b17e54586811.png)  
   

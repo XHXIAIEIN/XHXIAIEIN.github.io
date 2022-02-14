@@ -1,7 +1,4 @@
-  
-# Construct 3 案例图书馆
-https://xhxiaiein.github.io/Construct3
-  
+
 # Catch Star  
 2022/GGJ/_Art_:东九/_Programmer_:XHXIAIEIN  
 

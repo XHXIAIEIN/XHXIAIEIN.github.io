@@ -1,3 +1,10 @@
+# Space Trick
+2022/CGJ/_Art_:Ramenn/_Programmer_:XHXIAIEIN  
+
+Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/CGJ/  
+![03](https://user-images.githubusercontent.com/45864744/175943391-16c951f8-1e54-49f3-b674-f8810c6a9683.png)
+
+
 
 # Catch Star  
 2022/GGJ/_Art_:东九/_Programmer_:XHXIAIEIN  

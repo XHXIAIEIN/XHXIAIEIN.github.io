@@ -3,7 +3,6 @@
 2022/CGJ/_Art_:HDYE/_Programmer_:XHXIAIEIN  
 
 Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GMTK/  
-![01](https://user-images.githubusercontent.com/45864744/182051796-60440609-26fb-46a6-8ab7-70e266e8b329.png)
 ![02](https://user-images.githubusercontent.com/45864744/182051800-90807804-e802-4cd1-9e03-f8f6ea693d3b.png)
 
 

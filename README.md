@@ -1,3 +1,5 @@
+都是 48小时 Gamejam 做的，48小时能做成什么样就什么样了...总有一天.....
+
 
 # Arson Dice Demogorgon
 2022/GMTK/_Art_:HDYE/_Programmer_:XHXIAIEIN  

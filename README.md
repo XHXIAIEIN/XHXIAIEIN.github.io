@@ -3,7 +3,7 @@
 
 # Memory cleaner
 2022/GameForGood/_Art_:CLRed/_Programmer_:XHXIAIEIN  
-Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GFG/
+Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GFG/  
 ![02](https://user-images.githubusercontent.com/45864744/185755277-a19a5286-fb91-4b90-98c7-49e8beef7a25.png)
 
 # Arson Dice Demogorgon

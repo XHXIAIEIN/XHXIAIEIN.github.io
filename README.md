@@ -1,23 +1,25 @@
 都是 48小时 Gamejam 做的，48小时能做成什么样就什么样了...总有一天.....
 
 
+# Memory cleaner
+2022/GMTK/_Art_:CLRed/_Programmer_:XHXIAIEIN  
+Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GFG/  
+![f942bd5a7eed01eb727fbb871935062](https://user-images.githubusercontent.com/45864744/185755277-a19a5286-fb91-4b90-98c7-49e8beef7a25.png)
+
 # Arson Dice Demogorgon
 2022/GMTK/_Art_:HDYE/_Programmer_:XHXIAIEIN  
-
 Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GMTK/  
 ![02](https://user-images.githubusercontent.com/45864744/182051800-90807804-e802-4cd1-9e03-f8f6ea693d3b.png)
 
 
 # Space Trick
 2022/CGJ/_Art_:Ramenn/_Programmer_:XHXIAIEIN  
-
 Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/CGJ/  
 ![03](https://user-images.githubusercontent.com/45864744/175943391-16c951f8-1e54-49f3-b674-f8810c6a9683.png)
 
 
 # Catch Star  
 2022/GGJ/_Art_:东九/_Programmer_:XHXIAIEIN  
-
 Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GGJ/  
 ![2022_1](https://user-images.githubusercontent.com/45864744/151072849-546987d3-31c1-40e2-8ec2-cdd676b41740.png)
 ![2022_2](https://user-images.githubusercontent.com/45864744/151072883-d270b3d1-3503-4414-8898-24d989326a76.png)

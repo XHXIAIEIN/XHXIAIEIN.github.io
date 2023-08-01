@@ -10,11 +10,11 @@ Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2023/CGJ/
 ![03](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/5293ab0d-6f99-4eaf-9f34-19fc64c049ee)
 
 # Re-pitaka(2 Week)
-2023/BOOOM/_Team_:落日间/_Design_:叶梓涛/_Art_:改刀SD/_Programmer_:叶梓涛, XHXIAIEIN/_Server_:一驰/_Thank_:Sleepy Jeff/Zuxin    
+2023/BOOOM/_Team_:落日间/_Design_:叶梓涛/_Art_:改刀SD/_Programmer_:叶梓涛, XHXIAIEIN/_Server_:一驰/_Thank_:Sleepy Jeff, Zuxin    
 Game: https://xpaidia.com/game/repitaka/  
-![01](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/f61245a3-5021-48f7-adbf-73cd96987fed)  
-![02](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/2b3484af-20ed-41e2-b9cc-27388bb2fa91)  
-![03](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/37a8015c-0588-4dc6-8e66-b6a1487a77d0)  
+![01](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/37a8015c-0588-4dc6-8e66-b6a1487a77d0)  
+![02](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/f61245a3-5021-48f7-adbf-73cd96987fed)  
+![03](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/2b3484af-20ed-41e2-b9cc-27388bb2fa91)  
 
 
 # Memory cleaner

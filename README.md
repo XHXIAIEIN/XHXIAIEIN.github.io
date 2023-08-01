@@ -9,7 +9,7 @@ Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2023/CGJ/
 ![02](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/df1ad6c6-2dfa-4e2b-a855-8fa17b2c3d26)
 ![03](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/5293ab0d-6f99-4eaf-9f34-19fc64c049ee)
 
-# Re-pitaka(2 Week)
+# Re-pitaka(2 Weeks)
 2023/BOOOM/_Team_:落日间/_Design_:叶梓涛/_Art_:改刀SD/_Programmer_:叶梓涛, XHXIAIEIN/_Server_:一驰/_Thank_:Sleepy Jeff, Zuxin    
 Game: https://xpaidia.com/game/repitaka/  
 ![01](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/37a8015c-0588-4dc6-8e66-b6a1487a77d0)  

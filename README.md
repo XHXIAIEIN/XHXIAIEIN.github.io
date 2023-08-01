@@ -9,10 +9,19 @@ Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2023/CGJ/
 ![02](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/df1ad6c6-2dfa-4e2b-a855-8fa17b2c3d26)
 ![03](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/5293ab0d-6f99-4eaf-9f34-19fc64c049ee)
 
+# Re-pitaka(2 Week)
+2023/BOOOM/_Design_:Yezitao/_Art_:GaiDao/_Programmer_:Yezitao, XHXIAIEIN//_Team_:落日间
+Game: https://xpaidia.com/game/repitaka/
+![01](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/f61245a3-5021-48f7-adbf-73cd96987fed)
+![02](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/2b3484af-20ed-41e2-b9cc-27388bb2fa91)
+![03](https://github.com/XHXIAIEIN/XHXIAIEIN.github.io/assets/45864744/37a8015c-0588-4dc6-8e66-b6a1487a77d0)
+
+
 # Memory cleaner
 2022/GameForGood/_Art_:CLRed/_Programmer_:XHXIAIEIN  
 Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GFG/  
 ![02](https://user-images.githubusercontent.com/45864744/185755277-a19a5286-fb91-4b90-98c7-49e8beef7a25.png)
+
 
 # Arson Dice Demogorgon
 2022/GMTK/_Art_:HDYE/_Programmer_:XHXIAIEIN  
@@ -32,7 +41,6 @@ Demo(GameJam version)：https://xhxiaiein.github.io/Demo/GameJam/2022/GGJ/
 ![2022_1](https://user-images.githubusercontent.com/45864744/151072849-546987d3-31c1-40e2-8ec2-cdd676b41740.png)
 ![2022_2](https://user-images.githubusercontent.com/45864744/151072883-d270b3d1-3503-4414-8898-24d989326a76.png)
 ![2022_3](https://user-images.githubusercontent.com/45864744/151072964-e0b07ea3-14a4-46f6-bf34-8c541accce83.png)
-
 
   
 # Remember  

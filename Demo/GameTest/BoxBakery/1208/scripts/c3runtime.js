@@ -8100,6 +8100,7 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => ((n0.ExpObject() + "\n") + "*搅拌: OK");
 		},
+		() => "否",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => ((n0.ExpObject() + "\n") + "*搅拌? NO");
@@ -8499,7 +8500,6 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "Shop Background",
 		() => "Kitchen: Setup",
-		() => "否",
 		() => "Kitchen: Make",
 		() => "直接加工",
 		() => "冷藏",

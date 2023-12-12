@@ -1,0 +1,48 @@
+
+zjjg.png
+size: 860,525
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hand
+  rotate: true
+  xy: 541, 193
+  size: 330, 317
+  orig: 330, 317
+  offset: 0, 0
+  index: -1
+hui_1
+  rotate: true
+  xy: 2, 2
+  size: 521, 537
+  orig: 521, 537
+  offset: 0, 0
+  index: -1
+hui_2
+  rotate: false
+  xy: 762, 125
+  size: 59, 66
+  orig: 59, 66
+  offset: 0, 0
+  index: -1
+hui_3
+  rotate: true
+  xy: 541, 84
+  size: 107, 109
+  orig: 107, 110
+  offset: 0, 1
+  index: -1
+hui_4
+  rotate: true
+  xy: 652, 111
+  size: 80, 108
+  orig: 80, 108
+  offset: 0, 0
+  index: -1
+hui_5
+  rotate: true
+  xy: 762, 100
+  size: 23, 21
+  orig: 23, 21
+  offset: 0, 0
+  index: -1

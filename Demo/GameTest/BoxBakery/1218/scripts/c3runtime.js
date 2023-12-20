@@ -8675,15 +8675,14 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Dictionary,
 		C3.Plugins.Gritsenko_Spine,
 		C3.Plugins.System.Cnds.IsGroupActive,
-		C3.Plugins.Sprite.Cnds.OnCreated,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.System.Acts.SetLayerVisible,
+		C3.Plugins.System.Acts.SetLayerInteractive,
 		C3.Plugins.Sprite.Cnds.PickChildren,
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.Sprite.Exps.BBoxMidX,
 		C3.Plugins.Sprite.Exps.BBoxMidY,
 		C3.Plugins.Sprite.Acts.MoveAtAngle,
-		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.Plugins.System.Acts.SetLayerVisible,
-		C3.Plugins.System.Acts.SetLayerInteractive,
 		C3.Plugins.Json.Cnds.HasKey,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.Json.Exps.Get,
@@ -8852,6 +8851,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.LocalStorage.Acts.RemoveItem,
 		C3.Plugins.System.Cnds.LayerNameExists,
 		C3.Plugins.System.Cnds.OnLayoutEnd,
+		C3.Plugins.Text.Acts.SetPos,
+		C3.Plugins.Text.Exps.Height,
+		C3.Plugins.TiledBg.Acts.AddChild,
 		C3.Plugins.System.Exps.fps,
 		C3.Plugins.System.Exps.roundtodp,
 		C3.Plugins.System.Exps.cpuutilisation,
@@ -8863,10 +8865,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.For,
 		C3.Plugins.System.Exps.tokenat,
 		C3.Plugins.System.Exps.loopindex,
+		C3.Plugins.System.Exps.tokencount,
 		C3.Plugins.System.Cnds.EvaluateExpression,
 		C3.Plugins.System.Acts.SetFunctionReturnValue,
-		C3.ScriptsInEvents.Main_Event28_Act1,
-		C3.ScriptsInEvents.Main_Event29_Act1,
+		C3.ScriptsInEvents.Main_Event30_Act1,
+		C3.ScriptsInEvents.Main_Event31_Act1,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Mouse.Exps.X,
 		C3.Plugins.Mouse.Exps.Y,
@@ -8887,9 +8890,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Exps.layoutwidth,
 		C3.Plugins.Sprite.Acts.SetWidth,
 		C3.Plugins.Sprite.Acts.SetHeight,
-		C3.Plugins.Text.Acts.SetPos,
-		C3.Plugins.Text.Exps.Height,
-		C3.Plugins.TiledBg.Acts.AddChild,
 		C3.Plugins.PlatformInfo.Exps.SafeAreaInsetTop,
 		C3.Plugins.TiledBg.Acts.SetY,
 		C3.Plugins.PlatformInfo.Exps.SafeAreaInsetBottom,
@@ -8897,6 +8897,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TiledBg.Acts.SetX,
 		C3.Plugins.PlatformInfo.Exps.SafeAreaInsetRight,
 		C3.Plugins.Browser.Cnds.OnResize,
+		C3.Plugins.System.Acts.SetLayoutScale,
 		C3.Plugins.System.Acts.SetCanvasSize,
 		C3.Plugins.Json.Acts.AddTo,
 		C3.ScriptsInEvents.Data_Event3_Act1,
@@ -8908,7 +8909,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.StopLoop,
 		C3.ScriptsInEvents.Data_Event26_Act1,
 		C3.Plugins.LocalStorage.Acts.SetItem,
-		C3.Plugins.System.Exps.tokencount,
 		C3.Plugins.System.Exps.float,
 		C3.Plugins.Touch.Exps.TouchID,
 		C3.Plugins.Touch.Exps.XForID,
@@ -8918,11 +8918,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse.Cnds.OnWheel,
 		C3.Plugins.Mouse.Exps.WheelDeltaY,
 		C3.Plugins.Mouse.Cnds.OnClick,
-		C3.Plugins.System.Acts.SetLayoutScale,
 		C3.Plugins.System.Acts.UnloadUnusedTextures,
 		C3.Plugins.System.Acts.LoadLayoutTexturesByName,
 		C3.Plugins.System.Acts.GoToLayoutByName,
 		C3.Plugins.TiledBg.Cnds.IsVisible,
+		C3.Plugins.Sprite.Cnds.OnCreated,
 		C3.Plugins.Text.Acts.ZMoveToObject,
 		C3.Plugins.Text.Acts.SetInstanceVar,
 		C3.Plugins.Sprite.Acts.ZMoveToObject,
@@ -8971,26 +8971,32 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Exps.time,
 		C3.Plugins.Overboy_Utils.Exps.colorToValue,
 		C3.Behaviors.Tween.Exps.Progress,
-		C3.Behaviors.Tween.Acts.StopTweens,
-		C3.Plugins.Text.Exps.Text,
-		C3.Plugins.Text.Acts.SetFontSize,
 		C3.Plugins.Text.Cnds.OnCreated,
 		C3.Behaviors.Sin.Acts.SetMovement,
 		C3.Behaviors.Sin.Acts.SetMagnitude,
 		C3.Behaviors.Sin.Acts.SetPeriod,
-		C3.Plugins.Browser.Acts.ConsoleLog,
+		C3.Plugins.Text.Cnds.IsBoolInstanceVarSet,
+		C3.Behaviors.Tween.Acts.StopTweens,
+		C3.Plugins.Text.Exps.Text,
+		C3.Plugins.Text.Acts.SetFontSize,
 		C3.Plugins.Sprite.Cnds.IsOnLayer,
 		C3.Plugins.Gritsenko_Spine.Cnds.OnCreated,
 		C3.Plugins.Gritsenko_Spine.Acts.SetOpacity,
 		C3.Plugins.Gritsenko_Spine.Acts.Stop,
+		C3.Plugins.Gritsenko_Spine.Acts.SetAnimationTime,
+		C3.Plugins.Gritsenko_Spine.Acts.SetPos,
+		C3.Plugins.Gritsenko_Spine.Exps.LayerName,
+		C3.Plugins.Gritsenko_Spine.Exps.X,
+		C3.Plugins.Gritsenko_Spine.Exps.Y,
 		C3.Plugins.Gritsenko_Spine.Cnds.OnSkeletonLoaded,
 		C3.Plugins.Gritsenko_Spine.Acts.SetHeight,
 		C3.Plugins.Gritsenko_Spine.Exps.TextureHeight,
 		C3.Plugins.Gritsenko_Spine.Acts.SetWidth,
 		C3.Plugins.Gritsenko_Spine.Exps.TextureWidth,
-		C3.Plugins.Gritsenko_Spine.Exps.LayerName,
+		C3.Plugins.Gritsenko_Spine.Acts.SetAnimation,
 		C3.Plugins.Gritsenko_Spine.Acts.Play,
-		C3.Plugins.Gritsenko_Spine.Exps.AnimationEnd
+		C3.Plugins.Gritsenko_Spine.Cnds.OnAnimationFinished,
+		C3.Plugins.Gritsenko_Spine.Cnds.IsBoolInstanceVarSet
 	];
 };
 self.C3_JsPropNameTable = [
@@ -9104,7 +9110,7 @@ self.C3_JsPropNameTable = [
 	{instMaterial: 0},
 	{IconID: 0},
 	{iconInfo: 0},
-	{iconStyle: 0},
+	{iconFlavour: 0},
 	{IconSet: 0},
 	{State: 0},
 	{IconSetting: 0},
@@ -9182,7 +9188,7 @@ self.C3_JsPropNameTable = [
 	{WaveEffect: 0},
 	{OffsetX: 0},
 	{OffsetY: 0},
-	{OutlineTemplete: 0},
+	{Templete: 0},
 	{DebugText: 0},
 	{GameText: 0},
 	{Onion: 0},
@@ -9225,7 +9231,6 @@ self.C3_JsPropNameTable = [
 	{priceCount: 0},
 	{shopBuyCountFrame: 0},
 	{AvailableItems: 0},
-	{OrderItem: 0},
 	{page: 0},
 	{InventoryCategoryBar: 0},
 	{direction: 0},
@@ -9282,16 +9287,20 @@ self.C3_JsPropNameTable = [
 	{CookIngredient: 0},
 	{SystemData: 0},
 	{CookbookDebug: 0},
+	{PickItemData: 0},
 	{Array: 0},
 	{AJAX: 0},
 	{LocalStorage: 0},
 	{GameData: 0},
 	{JSON: 0},
+	{Center: 0},
 	{InWait: 0},
 	{EndWait: 0},
+	{EndStay: 0},
 	{cookAnimtion1: 0},
-	{cookAnimtion2: 0},
 	{cookAnimtion3: 0},
+	{cookAnimtion2: 0},
+	{cookAnimtion4: 0},
 	{TextGroup: 0},
 	{HUD: 0},
 	{ScreenObject: 0},
@@ -9328,12 +9337,12 @@ self.C3_JsPropNameTable = [
 	{stringMethod: 0},
 	{stringMethod1: 0},
 	{stringMethod2: 0},
-	{MathID: 0},
 	{DataSetup: 0},
 	{debugText: 0},
 	{itemList: 0},
 	{itemList2: 0},
 	{itemList3: 0},
+	{itemList4: 0},
 	{item: 0},
 	{Direction: 0},
 	{CurrentValue: 0},
@@ -9403,6 +9412,8 @@ self.C3_JsPropNameTable = [
 	{duration: 0},
 	{linear: 0},
 	{Text: 0},
+	{FlavourData: 0},
+	{FlavourString: 0},
 	{layerName: 0}
 ];
 
@@ -9478,7 +9489,7 @@ self.InstanceType = {
 	chopslice2: class extends self.ISpriteInstance {},
 	instMaterial: class extends self.ISpriteInstance {},
 	iconInfo: class extends self.ISpriteInstance {},
-	iconStyle: class extends self.ISpriteInstance {},
+	iconFlavour: class extends self.ISpriteInstance {},
 	IconSet: class extends self.ISpriteInstance {},
 	IconSetting: class extends self.ISpriteInstance {},
 	iconMap: class extends self.ISpriteInstance {},
@@ -9545,7 +9556,6 @@ self.InstanceType = {
 	dialogFrame: class extends self.ISpriteInstance {},
 	shopBuyCountFrame: class extends self.ISpriteInstance {},
 	AvailableItems: class extends self.IJSONInstance {},
-	OrderItem: class extends self.IJSONInstance {},
 	InventoryCategoryBar: class extends self.IWorldInstance {},
 	LoadingBackground: class extends self.ITiledBackgroundInstance {},
 	ItemSlot: class extends self.ISpriteInstance {},
@@ -9589,14 +9599,16 @@ self.InstanceType = {
 	CookIngredient: class extends self.IJSONInstance {},
 	SystemData: class extends self.IJSONInstance {},
 	CookbookDebug: class extends self.IJSONInstance {},
+	PickItemData: class extends self.IJSONInstance {},
 	Array: class extends self.IArrayInstance {},
 	AJAX: class extends self.IInstance {},
 	LocalStorage: class extends self.IInstance {},
 	GameData: class extends self.IDictionaryInstance {},
 	JSON: class extends self.IJSONInstance {},
 	cookAnimtion1: class extends self.IWorldInstance {},
-	cookAnimtion2: class extends self.IWorldInstance {},
 	cookAnimtion3: class extends self.IWorldInstance {},
+	cookAnimtion2: class extends self.IWorldInstance {},
+	cookAnimtion4: class extends self.IWorldInstance {},
 	TextGroup: class extends self.ITextInstance {},
 	HUD: class extends self.ISpriteInstance {},
 	ScreenObject: class extends self.ISpriteInstance {},
@@ -9714,6 +9726,9 @@ function or(l, r)
 self.C3_ExpressionFuncs = [
 		() => "Cooking",
 		() => "Cooking: Setup",
+		() => "ItemBar",
+		() => "CookIndicator",
+		() => "World",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
@@ -9723,9 +9738,6 @@ self.C3_ExpressionFuncs = [
 			return () => (180 + ((360 / 5) * n0.ExpInstVar()));
 		},
 		() => 105,
-		() => "ItemBar",
-		() => "CookIndicator",
-		() => "World",
 		() => "Ingredient",
 		() => "Mixing",
 		p => {
@@ -9767,6 +9779,22 @@ self.C3_ExpressionFuncs = [
 			return () => and(n0.ExpInstVar_Family(), ((n1.ExpInstVar_Family()) === ("cookBowl") ? 1 : 0));
 		},
 		() => "碗里面已经有东西了！",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("成品", 0, 1);
+		},
+		() => 8,
+		() => "位置不够啦！\\n卖点面包再试试吧~",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const n1 = p._GetNode(1);
+			return () => f0(n1.ExpInstVar_Family(), "mixable");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const n1 = p._GetNode(1);
+			return () => f0("{0}不可放碗里哦！店长！", "{0}", n1.ExpObject());
+		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
@@ -10019,7 +10047,6 @@ self.C3_ExpressionFuncs = [
 		() => "Disable",
 		() => 20,
 		() => "Pick",
-		() => 8,
 		() => "ItemBar: DragItem",
 		() => "无",
 		() => "Watting",
@@ -10211,16 +10238,6 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
-			return () => f0(n1.ExpObject("Category"), 0, 1);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => and("Ingredients.", n0.ExpObject("ItemID"));
-		},
-		() => "仓库已经塞不下了......",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const n1 = p._GetNode(1);
 			const n2 = p._GetNode(2);
 			return () => add(f0(n1.ExpObject("ItemID"), "ItemStock"), n2.ExpObject("OrderCount"));
 		},
@@ -10252,6 +10269,12 @@ self.C3_ExpressionFuncs = [
 			const n2 = p._GetNode(2);
 			return () => ((((f0(n1.ExpObject("ShopStock"))) > (0) ? 1 : 0)) ? (n2.ExpObject("ShopStock")) : (99));
 		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const n1 = p._GetNode(1);
+			return () => f0(n1.ExpObject("Category"), 0, 1);
+		},
+		() => "仓库已经塞不下了......",
 		() => "Shop Background",
 		() => "shop",
 		p => {
@@ -10265,6 +10288,7 @@ self.C3_ExpressionFuncs = [
 		() => "直接加工",
 		() => "冷冻",
 		() => "烤箱",
+		() => "CloseMethod",
 		() => "Cooking: Action",
 		() => "Method",
 		() => "Match",
@@ -10308,7 +10332,7 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ("cookbook." + v0.GetValue());
+			return () => ("Cookbook." + v0.GetValue());
 		},
 		() => "Kitchen: Windows",
 		p => {
@@ -10343,19 +10367,32 @@ self.C3_ExpressionFuncs = [
 		() => "Debug",
 		() => "DEBUG",
 		p => {
+			const n0 = p._GetNode(0);
+			return () => ((n0.ExpInstVar()) === ("Performance") ? 1 : 0);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => ((n0.ExpInstVar()) === (2) ? 1 : 0);
+		},
+		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const f1 = p._GetNode(1).GetBoundMethod();
 			const f2 = p._GetNode(2).GetBoundMethod();
 			const f3 = p._GetNode(3).GetBoundMethod();
 			const f4 = p._GetNode(4).GetBoundMethod();
-			return () => ((and((and((and(((("\n" + "\n") + "\n") + "\n"), f0()) + " FPS | "), f1((f2() * 100), 1)) + "% CPU | "), f3((f4() * 100), 1)) + "% GPU") + "\n");
+			return () => ((and((and(and(f0(), " FPS | "), f1((f2() * 100), 1)) + "% CPU | "), f3((f4() * 100), 1)) + "% GPU") + "\n");
 		},
 		() => "items",
-		() => 3,
+		() => 15,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const f1 = p._GetNode(1).GetBoundMethod();
-			return () => f0("a019|2,a013|2,a010|2,a023|2", f1("items"), ",");
+			return () => f0("a001|3,a003|4,a004|2,a005|2,a006|2,a007|3,a009|2,a010,a011,0001,0002,0003,0004,0005,0101,0102", f1("items"), ",");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			return () => f0(v1.GetValue(), "|");
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -10458,6 +10495,7 @@ self.C3_ExpressionFuncs = [
 		() => "Profile: Parse",
 		() => "Responsive",
 		() => "Hock",
+		() => 3,
 		() => 4,
 		() => 9,
 		p => {
@@ -10492,19 +10530,6 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
 			return () => (f0("UI") * n1.ExpInstVar_Family());
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => ((n0.ExpInstVar()) === ("Performance") ? 1 : 0);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => ((n0.ExpInstVar()) === (2) ? 1 : 0);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			const n1 = p._GetNode(1);
-			return () => (n0.ExpObject() - n1.ExpObject());
 		},
 		() => "Viewport",
 		p => {
@@ -10834,6 +10859,11 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
+			return () => (n0.ExpObject() - n1.ExpObject());
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
 			const n2 = p._GetNode(2);
 			return () => (n0.ExpObject() - (n1.ExpObject() - n2.ExpObject()));
 		},
@@ -11121,9 +11151,14 @@ self.C3_ExpressionFuncs = [
 		() => "Text",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			return () => f0(v1.GetValue(), "\\n", "\n");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
-			const v2 = p._GetNode(2).GetVar();
-			return () => f0(n1.ExpInstVar_Family(), "{0}", v2.GetValue());
+			const n2 = p._GetNode(2);
+			return () => f0(n1.ExpInstVar_Family(), "{0}", n2.ExpInstVar_Family());
 		},
 		() => "BounceSize",
 		() => "BounceText",
@@ -11164,12 +11199,38 @@ self.C3_ExpressionFuncs = [
 		() => "CookingFail",
 		() => "DialogCookFail",
 		() => "ToastSuccess",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and(f0(v1.GetValue(), "Name"), "+1");
+		},
 		() => "CookingUnlock",
-		() => "DialogCookUnclock",
+		() => "ItemCategory",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const n1 = p._GetNode(1);
+			const n2 = p._GetNode(2);
+			return () => f0(n1.ExpInstVar(), "{0}", n2.ExpObject("Type"));
+		},
+		() => "ItemFlavour",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject("Flavour");
+		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ("Cookbook." + v0.GetValue());
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			const f3 = p._GetNode(3).GetBoundMethod();
+			return () => (((v0.GetValue() + "[icon=") + f1(v2.GetValue(), f3(), ",")) + "]");
 		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const n1 = p._GetNode(1);
+			const v2 = p._GetNode(2).GetVar();
+			return () => f0(n1.ExpInstVar(), "{0}", v2.GetValue());
+		},
+		() => "DialogCookUnclock",
 		() => "CookingMethod",
 		() => "SpineCookMethodEnd",
 		() => 0.45,
@@ -11181,18 +11242,20 @@ self.C3_ExpressionFuncs = [
 		() => "Hide",
 		() => "CloseDialog",
 		() => "{}",
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			return () => (n0.ExpObject() + n1.ExpInstVar_Family());
+		},
+		() => "animation",
 		() => "InWait",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
 			return () => f0(0.000001, n1.ExpInstVar_Family());
 		},
-		() => "Stop",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject(0);
-		},
-		() => "EndWait"
+		() => "EndWait",
+		() => "idle"
 ];
 
 

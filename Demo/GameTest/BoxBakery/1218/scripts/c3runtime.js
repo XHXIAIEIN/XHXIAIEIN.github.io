@@ -2625,8 +2625,9 @@ pluginUID);this._flowchartStates.set(flowchartTag,flowchartState);if(setAsCurren
 triggerNodeChange=false){if(flowchartState===this._currentFlowchartState)return;this._TriggerBeforeFlowchartChange();this._TriggerAfterFlowchartChange(flowchartState,triggerNodeChange)}GetCurrentFlowchartState(tag){if(typeof tag==="string")return this.GetFlowchartState(tag);else if(this._flowchartStateStack.length)return this._flowchartStateStack[this._flowchartStateStack.length-1];else return this._currentFlowchartState}_TriggerBeforeFlowchartChange(){if(!this._currentFlowchartState)return;if(this._currentFlowchartState.WasReleased())return;
 const inst=this._currentFlowchartState.GetPluginInstance().GetInstance();this._currentFlowchartState.PushIsTriggerState();this.PushFlowchartState(this._currentFlowchartState);this._runtime.Trigger(C3.Plugins.Flowchart.Cnds.OnBeforeFlowchartChange,inst);this.PopFlowchartState();this._currentFlowchartState.PopIsTriggerState()}_TriggerAfterFlowchartChange(flowchartState,triggerNodeChange=false){this._currentFlowchartState=flowchartState;if(!this._currentFlowchartState)return;if(this._currentFlowchartState.WasReleased())return;
 const inst=this._currentFlowchartState.GetPluginInstance().GetInstance();this._currentFlowchartState.PushIsTriggerState();this.PushFlowchartState(this._currentFlowchartState);this._runtime.Trigger(C3.Plugins.Flowchart.Cnds.OnFlowchartChange,inst);if(triggerNodeChange){this._runtime.Trigger(C3.Plugins.Flowchart.Cnds.OnAnyNodeChange,inst);this._runtime.Trigger(C3.Plugins.Flowchart.Cnds.OnTaggedNodeChange,inst)}this.PopFlowchartState();this._currentFlowchartState.PopIsTriggerState()}_SaveToJson(){return{"flowchartJsonObjects":[...this._flowchartStates.values()].map(fs=>
-fs._SaveToJson()),"currentFlowchartTag":this._currentFlowchartState.GetTag()}}_LoadFromJson(o){if(!o)return;const newFlowchartStates=new Map;for(const flowchartJsonObject of o["flowchartJsonObjects"]){const flowchartTag=flowchartJsonObject["flowchartTag"];if(this._flowchartStates.has(flowchartTag)){const flowchartState=this._flowchartStates.get(flowchartTag);flowchartState._LoadFromJson(flowchartJsonObject);newFlowchartStates.set(flowchartTag,flowchartState)}else{const flowchartState=this.AddFlowchartState(flowchartJsonObject["flowchartName"],
-flowchartJsonObject["startNodeTag"],flowchartJsonObject["flowchartTag"],null,false,flowchartJsonObject["pluginUID"]);newFlowchartStates.set(flowchartJsonObject["flowchartTag"],flowchartState)}}for(const [tag,state]of this._flowchartStates.entries()){if(newFlowchartStates.has(tag))continue;state.Release()}this._flowchartStates.clear();this._flowchartStates=newFlowchartStates;this.SetCurrentFlowchartState(this._flowchartStates.get(o["currentFlowchartTag"]),true)}};
+fs._SaveToJson()),"currentFlowchartTag":this._currentFlowchartState?this._currentFlowchartState.GetTag():null}}_LoadFromJson(o){if(!o)return;const newFlowchartStates=new Map;for(const flowchartJsonObject of o["flowchartJsonObjects"]){const flowchartTag=flowchartJsonObject["flowchartTag"];if(this._flowchartStates.has(flowchartTag)){const flowchartState=this._flowchartStates.get(flowchartTag);flowchartState._LoadFromJson(flowchartJsonObject);newFlowchartStates.set(flowchartTag,flowchartState)}else{const flowchartState=
+this.AddFlowchartState(flowchartJsonObject["flowchartName"],flowchartJsonObject["startNodeTag"],flowchartJsonObject["flowchartTag"],null,false,flowchartJsonObject["pluginUID"]);newFlowchartStates.set(flowchartJsonObject["flowchartTag"],flowchartState)}}for(const [tag,state]of this._flowchartStates.entries()){if(newFlowchartStates.has(tag))continue;state.Release()}this._flowchartStates.clear();this._flowchartStates=newFlowchartStates;const currentFlowchartTag=this._flowchartStates.get(o["currentFlowchartTag"]);
+if(currentFlowchartTag)this.SetCurrentFlowchartState(currentFlowchartTag,true)}};
 
 }
 
@@ -3840,13 +3841,13 @@ err);await this.TriggerAsync(C3.Plugins.System.Cnds.OnLoadFailed,null)}this._Cle
 this.GetProjectUniqueId(),description:this.GetProjectName()});return this._savegamesStorage}async _DoSaveToSlot(slotName){const saveJson=await this._SaveToJsonString();try{await this._GetSavegamesStorage().setItem(slotName,saveJson);console.log("[Construct] Saved state to storage ("+saveJson.length+" chars)");this._lastSaveJson=saveJson;await this.TriggerAsync(C3.Plugins.System.Cnds.OnSaveComplete,null);this._lastSaveJson=""}catch(err){console.error("[Construct] Failed to save state to storage: ",
 err);await this.TriggerAsync(C3.Plugins.System.Cnds.OnSaveFailed,null)}}async _DoLoadFromSlot(slotName){try{const loadJson=await this._GetSavegamesStorage().getItem(slotName);if(!loadJson)throw new Error("empty slot");console.log("[Construct] Loaded state from storage ("+loadJson.length+" chars)");await this._DoLoadFromJsonString(loadJson);this._lastSaveJson=loadJson;await this.TriggerAsync(C3.Plugins.System.Cnds.OnLoadComplete,null);this._lastSaveJson=""}catch(err){console.error("[Construct] Failed to load state from storage: ",
 err);await this.TriggerAsync(C3.Plugins.System.Cnds.OnLoadFailed,null)}}async _SaveToJsonString(){const o={"c3save":true,"version":1,"rt":{"time":this.GetGameTime(),"timeRaw":this.GetGameTimeRaw(),"walltime":this.GetWallTime(),"timescale":this.GetTimeScale(),"tickcount":this.GetTickCount(),"next_uid":this._nextUid,"running_layout":this.GetMainRunningLayout().GetSID(),"start_time_offset":Date.now()-this._startTime},"types":{},"layouts":{},"events":this._eventSheetManager._SaveToJson(),"timelines":this._timelineManager._SaveToJson(),
-"flowcharts":this._flowchartManager._SaveToJson(),"user_script_data":null};for(const objectClass of this._allObjectClasses){if(objectClass.IsFamily()||objectClass.HasNoSaveBehavior())continue;o["types"][objectClass.GetSID().toString()]=objectClass._SaveToJson()}for(const layout of this._layoutManager.GetAllLayouts())o["layouts"][layout.GetSID().toString()]=layout._SaveToJson();const saveEvent=this._CreateUserScriptEvent("save");saveEvent.saveData=null;await this.DispatchUserScriptEventAsyncWait(saveEvent);
+"flowcharts":this._flowchartManager?this._flowchartManager._SaveToJson():null,"user_script_data":null};for(const objectClass of this._allObjectClasses){if(objectClass.IsFamily()||objectClass.HasNoSaveBehavior())continue;o["types"][objectClass.GetSID().toString()]=objectClass._SaveToJson()}for(const layout of this._layoutManager.GetAllLayouts())o["layouts"][layout.GetSID().toString()]=layout._SaveToJson();const saveEvent=this._CreateUserScriptEvent("save");saveEvent.saveData=null;await this.DispatchUserScriptEventAsyncWait(saveEvent);
 o["user_script_data"]=saveEvent.saveData;return JSON.stringify(o)}IsLoadingState(){return this._isLoadingState}async _DoLoadFromJsonString(jsonStr){const layoutManager=this.GetLayoutManager();const o=JSON.parse(jsonStr);if(o["c2save"])throw new Error("C2 saves are incompatible with C3 runtime");if(!o["c3save"])throw new Error("not valid C3 save data");if(o["version"]>1)throw new Error("C3 save data from future version");this.ClearIntancesNeedingAfterLoad();this._dispatcher.dispatchEvent(C3.New(C3.Event,
 "beforeload"));for(const inst of this.allInstances()){const objectClass=inst.GetObjectClass();if(objectClass.HasNoSaveBehavior())continue;inst._OnBeforeLoad()}const rt=o["rt"];this._gameTime.Set(rt["time"]);if(rt.hasOwnProperty("timeRaw"))this._gameTimeRaw.Set(rt["timeRaw"]);this._wallTime.Set(rt["walltime"]);this._timeScale=rt["timescale"];this._tickCount=rt["tickcount"];this._startTime=Date.now()-rt["start_time_offset"];const layoutSid=rt["running_layout"];this._isLoadingState=true;let changedLayout=
 false;if(layoutSid!==this.GetMainRunningLayout().GetSID()){const changeToLayout=layoutManager.GetLayoutBySID(layoutSid);if(changeToLayout){await this._DoChangeLayout(changeToLayout);changedLayout=true}else return}for(const [sidStr,data]of Object.entries(o["layouts"])){const sid=parseInt(sidStr,10);const layout=layoutManager.GetLayoutBySID(sid);if(!layout)continue;layout._LoadFromJson(data)}for(const [sidStr,data]of Object.entries(o["types"])){const sid=parseInt(sidStr,10);const objectClass=this.GetObjectClassBySID(sid);
 if(!objectClass||objectClass.IsFamily()||objectClass.HasNoSaveBehavior())continue;objectClass._LoadFromJson(data)}for(const layout of this._layoutManager.GetAllLayouts())for(const layer of layout.allLayers())layer._LoadFromJsonAfterInstances();this.FlushPendingInstances();this._RefreshUidMap();this._isLoadingState=false;if(changedLayout){for(const inst of this.allInstances())inst.SetupInitialSceneGraphConnections();for(const [sidStr,data]of Object.entries(o["types"])){const sid=parseInt(sidStr,10);
 const objectClass=this.GetObjectClassBySID(sid);if(!objectClass||objectClass.IsFamily()||objectClass.HasNoSaveBehavior())continue;objectClass._SetupSceneGraphConnectionsOnChangeOfLayout(data)}}this._nextUid=rt["next_uid"];this._eventSheetManager._LoadFromJson(o["events"]);for(const objectClass of this._allObjectClasses){if(objectClass.IsFamily()||!objectClass.IsInContainer())continue;for(const inst of objectClass.GetInstances()){const iid=inst.GetIID();for(const otherType of objectClass.GetContainer().objectTypes()){if(otherType===
-objectClass)continue;const otherInstances=otherType.GetInstances();if(iid<0||iid>=otherInstances.length)throw new Error("missing sibling instance");inst._AddSibling(otherInstances[iid])}}}this._timelineManager._LoadFromJson(o["timelines"]);this._flowchartManager._LoadFromJson(o["flowcharts"]);layoutManager.SetAllLayerProjectionChanged();layoutManager.SetAllLayerMVChanged();this._dispatcher.dispatchEvent(C3.New(C3.Event,"afterload"));this.DoAfterLoad();for(const [sidStr,data]of Object.entries(o["types"])){const sid=
+objectClass)continue;const otherInstances=otherType.GetInstances();if(iid<0||iid>=otherInstances.length)throw new Error("missing sibling instance");inst._AddSibling(otherInstances[iid])}}}this._timelineManager._LoadFromJson(o["timelines"]);if(this._flowchartManager)this._flowchartManager._LoadFromJson(o["flowcharts"]);layoutManager.SetAllLayerProjectionChanged();layoutManager.SetAllLayerMVChanged();this._dispatcher.dispatchEvent(C3.New(C3.Event,"afterload"));this.DoAfterLoad();for(const [sidStr,data]of Object.entries(o["types"])){const sid=
 parseInt(sidStr,10);const objectClass=this.GetObjectClassBySID(sid);if(objectClass)objectClass._ClearLoadInstancesJson()}const loadEvent=this._CreateUserScriptEvent("load");loadEvent.saveData=o["user_script_data"];await this.DispatchUserScriptEventAsyncWait(loadEvent);this.UpdateRender()}SortOnTmpHierarchyPosition(f,s){return f.GetWorldInfo().GetTmpHierarchyPosition()-s.GetWorldInfo().GetTmpHierarchyPosition()}AddInstanceNeedingAfterLoad(inst,data){if(!inst.GetWorldInfo())return;this._instancesNeedingAfterLoadMap.set(inst,
 data);this._instancesNeedingAfterLoadArray.push(inst)}ClearIntancesNeedingAfterLoad(){this._instancesNeedingAfterLoadMap=new WeakMap;C3.clearArray(this._instancesNeedingAfterLoadArray)}DoAfterLoad(mode="full",opts=null){this._instancesNeedingAfterLoadArray.sort(this.SortOnTmpHierarchyPosition);for(const wi of this._instancesNeedingAfterLoadArray)wi._OnAfterLoad(this._instancesNeedingAfterLoadMap.get(wi),mode,opts);for(const wi of this._instancesNeedingAfterLoadArray)wi._OnAfterLoad2(this._instancesNeedingAfterLoadMap.get(wi),
 mode,opts);this.ClearIntancesNeedingAfterLoad()}async AddJobWorkerScripts(scripts){const loadUrls=await Promise.all(scripts.map(async url=>{const isCrossOrigin=C3.IsAbsoluteURL(url)&&(new URL(url)).origin!==location.origin;const isCordovaFileProtocol=this.IsCordova()&&this._assetManager.IsFileProtocol();if(isCrossOrigin||isCordovaFileProtocol||this.IsPreview()||this.GetExportType()==="playable-ad"){const blob=await this._assetManager.FetchBlob(url);return URL.createObjectURL(blob)}else if(C3.IsRelativeURL(url))return(new URL(url,
@@ -8716,6 +8717,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Plugins.Json.Exps.ArraySize,
+		C3.Plugins.Keyboard.Cnds.IsKeyDown,
+		C3.Behaviors.Tween.Acts.TweenTwoProperties,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.Json.Acts.SetPath,
 		C3.Plugins.Json.Acts.DeleteKey,
@@ -8737,7 +8740,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.AddChild,
 		C3.Plugins.Sprite.Cnds.PickByUID,
 		C3.Behaviors.Tween.Acts.StopAllTweens,
-		C3.Behaviors.Tween.Acts.TweenTwoProperties,
 		C3.Plugins.System.Acts.CreateObjectByName,
 		C3.Plugins.System.Cnds.PickLastCreated,
 		C3.Plugins.System.Acts.Wait,
@@ -8854,7 +8856,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Exps.roundtodp,
 		C3.Plugins.System.Exps.cpuutilisation,
 		C3.Plugins.System.Exps.gpuutilisation,
-		C3.Plugins.Keyboard.Cnds.IsKeyDown,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.LocalStorage.Acts.ClearStorage,
@@ -8977,6 +8978,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Sin.Acts.SetMovement,
 		C3.Behaviors.Sin.Acts.SetMagnitude,
 		C3.Behaviors.Sin.Acts.SetPeriod,
+		C3.Plugins.Browser.Acts.ConsoleLog,
 		C3.Plugins.Sprite.Cnds.IsOnLayer,
 		C3.Plugins.Gritsenko_Spine.Cnds.OnCreated,
 		C3.Plugins.Gritsenko_Spine.Acts.SetOpacity,
@@ -9279,6 +9281,7 @@ self.C3_JsPropNameTable = [
 	{CookFormula: 0},
 	{CookIngredient: 0},
 	{SystemData: 0},
+	{CookbookDebug: 0},
 	{Array: 0},
 	{AJAX: 0},
 	{LocalStorage: 0},
@@ -9321,14 +9324,16 @@ self.C3_JsPropNameTable = [
 	{HideTo: 0},
 	{Color: 0},
 	{Stop: 0},
+	{method: 0},
 	{stringMethod: 0},
 	{stringMethod1: 0},
 	{stringMethod2: 0},
-	{method: 0},
 	{MathID: 0},
 	{DataSetup: 0},
 	{debugText: 0},
-	{list: 0},
+	{itemList: 0},
+	{itemList2: 0},
+	{itemList3: 0},
 	{item: 0},
 	{Direction: 0},
 	{CurrentValue: 0},
@@ -9355,6 +9360,7 @@ self.C3_JsPropNameTable = [
 	{filterItemStock: 0},
 	{filterEmptyItems: 0},
 	{formula: 0},
+	{filterMixing: 0},
 	{filterMethod: 0},
 	{key: 0},
 	{value: 0},
@@ -9582,6 +9588,7 @@ self.InstanceType = {
 	CookFormula: class extends self.IJSONInstance {},
 	CookIngredient: class extends self.IJSONInstance {},
 	SystemData: class extends self.IJSONInstance {},
+	CookbookDebug: class extends self.IJSONInstance {},
 	Array: class extends self.IArrayInstance {},
 	AJAX: class extends self.IInstance {},
 	LocalStorage: class extends self.IInstance {},
@@ -9793,6 +9800,8 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpInstVar();
 		},
 		() => "MixingItemName",
+		() => "",
+		() => 0.12,
 		() => "MixingBowl",
 		() => "碗中只有一种原料...\n不可以搅拌哦！店长！",
 		() => "碗中没有原料不可以搅拌哦！店长！",
@@ -9833,7 +9842,6 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpObject(("Ingredient." + v1.GetValue()));
 		},
 		() => "Stuff",
-		() => "",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0((-10), 10);
@@ -9847,7 +9855,6 @@ self.C3_ExpressionFuncs = [
 		() => "MatchingRecipe",
 		() => "Bounce",
 		() => 0.51,
-		() => 0.12,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject("ItemObjectType");
@@ -10206,7 +10213,6 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			return () => f0(n1.ExpObject("Category"), 0, 1);
 		},
-		() => 12,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => and("Ingredients.", n0.ExpObject("ItemID"));
@@ -10257,7 +10263,7 @@ self.C3_ExpressionFuncs = [
 		() => "Mask",
 		() => "Kitchen: Make",
 		() => "直接加工",
-		() => "冷藏",
+		() => "冷冻",
 		() => "烤箱",
 		() => "Cooking: Action",
 		() => "Method",
@@ -10265,7 +10271,7 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
-			return () => f0(n1.ExpObject(), 0);
+			return () => (f0(n1.ExpObject(), 0, 0)).toString();
 		},
 		p => {
 			const n0 = p._GetNode(0);
@@ -10281,7 +10287,9 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			const v1 = p._GetNode(1).GetVar();
 			const v2 = p._GetNode(2).GetVar();
-			return () => ((((v0.GetValue()) === ("直接加工") ? 1 : 0)) ? (v1.GetValue()) : (v2.GetValue()));
+			const v3 = p._GetNode(3).GetVar();
+			const v4 = p._GetNode(4).GetVar();
+			return () => ((((v0.GetValue()) === ("直接加工") ? 1 : 0)) ? (v1.GetValue()) : (((((v2.GetValue()) === ("冷冻") ? 1 : 0)) ? (v3.GetValue()) : (v4.GetValue()))));
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -10343,11 +10351,11 @@ self.C3_ExpressionFuncs = [
 			return () => ((and((and((and(((("\n" + "\n") + "\n") + "\n"), f0()) + " FPS | "), f1((f2() * 100), 1)) + "% CPU | "), f3((f4() * 100), 1)) + "% GPU") + "\n");
 		},
 		() => "items",
-		() => 15,
+		() => 3,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const f1 = p._GetNode(1).GetBoundMethod();
-			return () => f0("a001|3,a003|4,a004|2,a005|2,a006|2,a007|3,a009|2, a010|1,a011|1,a012|3,a013|3,a015|1,a017|1,a018|2,a020|1,a025|1", f1("items"), ",");
+			return () => f0("a019|2,a013|2,a010|2,a023|2", f1("items"), ",");
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -10450,7 +10458,6 @@ self.C3_ExpressionFuncs = [
 		() => "Profile: Parse",
 		() => "Responsive",
 		() => "Hock",
-		() => 3,
 		() => 4,
 		() => 9,
 		p => {
@@ -10769,12 +10776,6 @@ self.C3_ExpressionFuncs = [
 			return () => f0(v1.GetValue(), "ICON");
 		},
 		p => {
-			const v0 = p._GetNode(0).GetVar();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			const v2 = p._GetNode(2).GetVar();
-			return () => ((((v0.GetValue()) === ("None") ? 1 : 0)) ? ("无") : (f1(v2.GetValue(), "Name")));
-		},
-		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
 			return () => f0(v1.GetValue(), "Type");
@@ -10915,7 +10916,6 @@ self.C3_ExpressionFuncs = [
 			return () => ((n0.ExpObject() + 116) + (248 * Math.floor((f1() / 4))));
 		},
 		() => "Inventory",
-		() => 11,
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
@@ -11166,14 +11166,17 @@ self.C3_ExpressionFuncs = [
 		() => "ToastSuccess",
 		() => "CookingUnlock",
 		() => "DialogCookUnclock",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ("Cookbook." + v0.GetValue());
+		},
 		() => "CookingMethod",
-		() => "SpineEnd",
+		() => "SpineCookMethodEnd",
 		() => 0.45,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() * 0.35);
 		},
-		() => 250,
 		() => "Close",
 		() => "Hide",
 		() => "CloseDialog",

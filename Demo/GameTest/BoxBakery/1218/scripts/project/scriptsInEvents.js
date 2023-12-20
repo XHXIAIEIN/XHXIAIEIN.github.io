@@ -34,18 +34,43 @@ const scriptsInEvents = {
 		    })
 		  );
 		
-		  const commentValue = data[0][rowIndex][0];
-		  const isCommentRow = Object.values(rowObject).every(value => value === "");
-		  
-		  if (!isCommentRow && typeof commentValue === 'string' && !commentValue.includes("::")) {
+		  const isEmptyRow = Object.values(rowObject).every(value => value === "");
+		
+		  if (!isEmptyRow) {
 		    output.push(rowObject);
 		  }
 		}
+		
+		output.forEach(item => {
+		  if (item.hasOwnProperty('ItemID')) {
+		    item.ItemID = String(item.ItemID);
+		  }
+		});
 		
 		runtime.setReturnValue(JSON.stringify(output));
 	},
 
 	async Localstorage_Event25_Act1(runtime, localVars)
+	{
+		const cookbookData = JSON.parse(localVars.c3convertJSON);
+		
+		const cookbookObject = cookbookData.reduce((acc, recipe) => {
+		    const { ItemID, Ingredient1, Ingredient2, Ingredient3, Ingredient4, Ingredient5, ...rest } = recipe;
+		
+		    const ingredients = [Ingredient1, Ingredient2, Ingredient3, Ingredient4, Ingredient5].filter(ingredient => ingredient !== "");
+		
+		    if (ItemID !== undefined) {
+		        const recipeObject = { ItemID, Ingredients: ingredients, ...rest };
+		        const filteredRecipe = Object.fromEntries(Object.entries(recipeObject).filter(([_, value]) => value !== undefined));
+		        acc[ItemID] = filteredRecipe;
+		    }
+		    return acc;
+		}, {});
+		
+		runtime.setReturnValue(JSON.stringify(cookbookObject));
+	},
+
+	async Localstorage_Event26_Act1(runtime, localVars)
 	{
 		const cookbookData = JSON.parse(localVars.c3convertJSON);
 		const itemsData = runtime.objects.ItemsData.getFirstInstance().getJsonDataCopy();
@@ -58,20 +83,6 @@ const scriptsInEvents = {
 		});
 		
 		runtime.setReturnValue(JSON.stringify(cookFormula));
-	},
-
-	async Localstorage_Event26_Act1(runtime, localVars)
-	{
-		const cookbookData = JSON.parse(localVars.c3convertJSON);
-		
-		const cookbookObject = cookbookData.reduce((acc, recipe) => {
-		    const { ItemID, Ingredient1, Ingredient2, Ingredient3, Ingredient4, Ingredient5, ...rest } = recipe;
-		    const ingredients = [Ingredient1, Ingredient2, Ingredient3, Ingredient4, Ingredient5].filter(Boolean);
-		    acc[ItemID] = { ItemID, Ingredients: ingredients, ...rest };
-		    return acc;
-		}, {});
-		
-		runtime.setReturnValue(JSON.stringify(cookbookObject));
 	},
 
 	async Data_Event3_Act1(runtime, localVars)
@@ -137,13 +148,13 @@ const scriptsInEvents = {
 
 	async Data_Event9_Act1(runtime, localVars)
 	{
-		// 获取 CookFormula 数据
+		// 获取食谱数据
 		const cookFormula = runtime.objects.CookFormula.getFirstInstance().getJsonDataCopy();
 		
-		// 获取 formula 和 filterMethod
-		const { formula, filterMethod } = localVars;
+		// 获取参数
+		const { formula, filterMixing, filterMethod } = localVars;
 		
-		// 解析 formula 字符串为对象
+		// 解析配方字符串为对象
 		const parsedFormula = JSON.parse(formula);
 		
 		// 查找匹配的食谱
@@ -155,23 +166,19 @@ const scriptsInEvents = {
 		        return ingredientCount === quantity;
 		    });
 		
-		    if (filterMethod === 1) {
-		        // 只检查材料
-		        return ingredientsMatch;
-		    } else {
-		        // 检查搅拌和烹饪方法是否匹配
-		        const mixingMatch = recipe.Mixing === parsedFormula.Mixing;
-		        const methodMatch = recipe.Method === parsedFormula.Method;
-		        // 如果 filterMethod 不为 1 时，需要检查所有条件
-		        return ingredientsMatch && mixingMatch && methodMatch;
-		    }
+		    // 检查搅拌和烹饪方法是否匹配
+		    const mixingMatch = recipe.Mixing === parsedFormula.Mixing;
+		    const methodMatch = recipe.Method === parsedFormula.Method;
+			
+		    return ingredientsMatch && mixingMatch && methodMatch;
+			
 		});
 		
-		// 提取匹配到的食谱 ItemID 数组
-		const matchedRecipeItemIDs = matched.map(recipe => recipe.ItemID);
+		// 检查匹配结果是否是唯一的，否则返回空
+		const matchedRecipeItemIDs = matched.length === 1 ? [matched[0].ItemID] : [];
 		
-		// 返回匹配结果，如果没有匹配到则返回空数组
-		runtime.setReturnValue(JSON.stringify(matchedRecipeItemIDs || []));
+		// 返回匹配结果
+		runtime.setReturnValue(JSON.stringify(matchedRecipeItemIDs));
 	},
 
 	async Data_Event26_Act1(runtime, localVars)

@@ -12,6 +12,16 @@ a {
   color: #dda403;
 }
 
+.about-me {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 16px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
 .sponsor-container {
   text-align: center;
   margin-inline: auto;

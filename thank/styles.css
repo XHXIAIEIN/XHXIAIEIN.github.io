@@ -19,7 +19,7 @@ a {
 }
 
 .sponsor-image {
-  max-width: 400px;
+  max-width: 600px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s; 

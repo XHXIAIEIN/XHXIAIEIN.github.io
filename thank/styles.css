@@ -15,7 +15,6 @@ a {
 .sponsor-container {
   text-align: center;
   margin-inline: auto;
-  width: 100%;
 }
 
 .sponsor-image {
@@ -23,8 +22,14 @@ a {
   height: auto;
   cursor: pointer;
   transition: transform 0.2s; 
+  
+  @media (width < 600px) {
+    max-width: 400px;
+  }
 }
 
 .sponsor-image:hover {
   transform: scale(1.05);
 }
+
+

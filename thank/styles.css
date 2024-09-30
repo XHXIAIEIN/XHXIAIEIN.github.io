@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #f5dbc8;
+  background-color: #3848a0;
+}
+
+a {
+  color: #dda403;
+}
+
+.sponsor-container {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.sponsor-image {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s; 
+}
+
+.sponsor-image:hover {
+  transform: scale(1.05);
+}

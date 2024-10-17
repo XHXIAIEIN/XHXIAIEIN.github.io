@@ -1,0 +1,182 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f7f9fc, #e1e6ed);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.6rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-content {
+    font-size: 1rem;
+    color: #555;
+    overflow: hidden;
+    height: 120px;
+}
+
+.card-content a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.card-content a:hover {
+    color: #2980b9;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 分页样式 */
+.pagination {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.pagination.active {
+    display: block;
+}
+
+.pagination span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #bdc3c7;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination span:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+.pagination span.active {
+    background-color: #3498db;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-pagination {
+    display: none; /* 默认隐藏 */
+}
+
+.card-pagination.active {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-content {
+        font-size: 0.9rem;
+    }
+}
+
+
+.card {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    height: 300px; /* 固定高度 */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.page {
+    display: none; /* 隐藏所有页 */
+}
+
+.page.active {
+    display: block; /* 显示当前页 */
+}
+
+.pagination-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.indicator.active {
+    background: #007bff; /* 高亮当前页 */
+}

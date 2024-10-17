@@ -1,5 +1,9 @@
 async function fetchMarkdown() {
-    const response = await fetch('https://raw.githubusercontent.com/XHXIAIEIN/awesome-CocosCreator/refs/heads/main/data.md?token=GHSAT0AAAAAACZDZPZYCVUCW5VSPXVMRN7KZYRLZMA');
+    const token = 'GHSAT0AAAAAACZDZPZYCVUCW5VSPXVMRN7KZYRLZMA'
+    const response = await fetch(`https://raw.githubusercontent.com/XHXIAIEIN/awesome-CocosCreator/refs/heads/main/data.md?token=${token}`);
+    if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+    }
     const markdownText = await response.text();
     const htmlContent = marked(markdownText);
     document.getElementById('content').innerHTML = parseMarkdownToCards(htmlContent);
